@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoonsense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inconsolata', monospace;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #intro-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        #intro-text {
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #content {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #image-container {
+            margin-bottom: 25px;
+            max-width: 80%;
+        }
+        
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #discord-link {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Responsive text sizing */
+        @media (max-width: 768px) {
+            #intro-text {
+                font-size: 16px;
+            }
+            
+            #discord-link {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #intro-text {
+                font-size: 14px;
+            }
+            
+            #discord-link {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="intro-screen">
+        <div id="intro-text">[Click anywhere]</div>
+    </div>
+    
+    <div id="content">
+        <div id="image-container">
+            <!-- Placeholder for image.png - replace with actual image -->
+            <div style="width: 280px; height: 180px; background: linear-gradient(45deg, #222, #444); display: flex; justify-content: center; align-items: center;">
+                <span style="color: #aaa; font-size: 14px;">image.png</span>
+            </div>
+        </div>
+        <a id="discord-link" href="https://discord.gg/2t5WT2AwZg" target="_blank">[Get spoonsense]</a>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const introScreen = document.getElementById('intro-screen');
+            const content = document.getElementById('content');
+            const music = document.getElementById('background-music');
+            
+            introScreen.addEventListener('click', function() {
+                // Play music
+                music.play().catch(e => {
+                    console.log("Audio play failed:", e);
+                });
+                
+                // Show content immediately
+                introScreen.style.display = 'none';
+                content.style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
