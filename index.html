@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoonsense</title>
+
+    <!-- Discord Embed (Open Graph Meta Tags) -->
+    <meta property="og:title" content="Spoonsense" />
+    <meta property="og:description" content="Get Spoonsense — click to enter the site." />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:video" content="https://files.catbox.moe/x4kz7p.mp4" />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="1280" />
+    <meta property="og:video:height" content="720" />
+    <meta property="og:image" content="https://files.catbox.moe/x4kz7p.mp4" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Twitter Card fallback -->
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:title" content="Spoonsense">
+    <meta name="twitter:description" content="Get Spoonsense — click to enter the site.">
+    <meta name="twitter:player" content="https://files.catbox.moe/x4kz7p.mp4">
+    <meta name="twitter:player:width" content="1280">
+    <meta name="twitter:player:height" content="720">
+
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -115,12 +137,10 @@
             const music = document.getElementById('background-music');
             
             introScreen.addEventListener('click', function() {
-                // Play music
                 music.play().catch(e => {
                     console.log("Audio play failed:", e);
                 });
                 
-                // Show content immediately
                 introScreen.style.display = 'none';
                 content.style.display = 'flex';
             });
