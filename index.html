@@ -70,11 +70,26 @@ body {
   max-width: 100%;
   height: auto;
 }
+#video-container {
+  margin-bottom: 25px;
+  max-width: 80%;
+}
+#video-container video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #fff;
+}
 #discord-link {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
   cursor: pointer;
+  margin-bottom: 15px;
+}
+#credits {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
   #intro-text {
@@ -102,7 +117,14 @@ body {
   <div id="image-container">
     <img src="image.png" alt="Spoonsense">
   </div>
+  <div id="video-container">
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
   <a id="discord-link" href="https://discord.gg/2t5WT2AwZg" target="_blank">[Get spoonsense]</a>
+  <div id="credits">Made by itslyko, spinscaffold and tellyscaffold.</div>
 </div>
 <audio id="background-music" loop>
   <source src="music.mp3" type="audio/mpeg">
