@@ -1,148 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spoonsense</title>
-
-    <!-- Discord Embed (Open Graph Meta Tags) -->
-    <meta property="og:title" content="Spoonsense" />
-    <meta property="og:description" content="Get Spoonsense nigga 😂✌️" />
-    <meta property="og:type" content="video.other" />
-    <meta property="og:url" content="https://tictac2673.github.io/spoonweb/" />
-    <meta property="og:video" content="https://files.catbox.moe/x4kz7p.mp4" />
-    <meta property="og:video:type" content="video/mp4" />
-    <meta property="og:image" content="https://files.catbox.moe/x4kz7p.mp4" />
-    <meta property="og:image:type" content="video/mp4" />
-
-    <!-- Twitter Card fallback -->
-    <meta name="twitter:card" content="player">
-    <meta name="twitter:title" content="Spoonsense">
-    <meta name="twitter:description" content="Get Spoonsense — click to enter the site.">
-    <meta name="twitter:player" content="https://files.catbox.moe/x4kz7p.mp4">
-    <meta name="twitter:player:width" content="1280">
-    <meta name="twitter:player:height" content="720">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inconsolata', monospace;
-        }
-        
-        body {
-            background-color: #000;
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #intro-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            z-index: 100;
-        }
-        
-        #intro-text {
-            font-size: 18px;
-            color: #fff;
-            text-align: center;
-        }
-        
-        #content {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        #image-container {
-            margin-bottom: 25px;
-            max-width: 80%;
-        }
-        
-        #image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        #discord-link {
-            color: #fff;
-            font-size: 16px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        /* Responsive text sizing */
-        @media (max-width: 768px) {
-            #intro-text {
-                font-size: 16px;
-            }
-            
-            #discord-link {
-                font-size: 14px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            #intro-text {
-                font-size: 14px;
-            }
-            
-            #discord-link {
-                font-size: 13px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spoonsense</title>
+<meta property="og:title" content="Spoonsense" />
+<meta property="og:description" content="Get Spoonsense nigga 😂✌️" />
+<meta property="og:type" content="video.other" />
+<meta property="og:url" content="https://tictac2673.github.io/spoonweb/" />
+<meta property="og:video" content="https://files.catbox.moe/x4kz7p.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="og:image" content="https://files.catbox.moe/x4kz7p.mp4" />
+<meta property="og:image:type" content="video/mp4" />
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Spoonsense">
+<meta name="twitter:description" content="Get Spoonsense — click to enter the site.">
+<meta name="twitter:player" content="https://files.catbox.moe/x4kz7p.mp4">
+<meta name="twitter:player:width" content="1280">
+<meta name="twitter:player:height" content="720">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+#intro-text {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+#content {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+#image-container {
+  margin-bottom: 25px;
+  max-width: 80%;
+}
+#image-container img {
+  max-width: 100%;
+  height: auto;
+}
+#discord-link {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #intro-text {
+    font-size: 16px;
+  }
+  #discord-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  #intro-text {
+    font-size: 14px;
+  }
+  #discord-link {
+    font-size: 13px;
+  }
+}
+</style>
 </head>
 <body>
-    <div id="intro-screen">
-        <div id="intro-text">[Click anywhere]</div>
-    </div>
-    
-    <div id="content">
-        <div id="image-container">
-            <img src="image.png" alt="Spoonsense">
-        </div>
-        <a id="discord-link" href="https://discord.gg/2t5WT2AwZg" target="_blank">[Get spoonsense]</a>
-    </div>
-    
-    <audio id="background-music" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const introScreen = document.getElementById('intro-screen');
-            const content = document.getElementById('content');
-            const music = document.getElementById('background-music');
-            
-            introScreen.addEventListener('click', function() {
-                music.play().catch(e => {
-                    console.log("Audio play failed:", e);
-                });
-                
-                introScreen.style.display = 'none';
-                content.style.display = 'flex';
-            });
-        });
-    </script>
+<div id="intro-screen">
+  <div id="intro-text">[Click anywhere]</div>
+</div>
+<div id="content">
+  <div id="image-container">
+    <img src="image.png" alt="Spoonsense">
+  </div>
+  <a id="discord-link" href="https://discord.gg/2t5WT2AwZg" target="_blank">[Get spoonsense]</a>
+</div>
+<audio id="background-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const introScreen = document.getElementById('intro-screen');
+  const content = document.getElementById('content');
+  const music = document.getElementById('background-music');
+  introScreen.addEventListener('click', function() {
+    music.play().catch(e => {
+      console.log("Audio play failed:", e);
+    });
+    introScreen.style.display = 'none';
+    content.style.display = 'flex';
+  });
+});
+</script>
 </body>
 </html>
